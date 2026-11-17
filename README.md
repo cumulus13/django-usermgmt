@@ -1,7 +1,7 @@
 # django-usermgmt
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/licface15/images/refs/heads/main/django-usermgmt/logo.png" width="80%" alt="logo">
+  <img src="https://raw.githubusercontent.com/licface15/images/refs/heads/main/django-usermgmt/logo.png" width="40%" alt="logo">
 </p>
 
 A production-oriented command line toolkit for managing **users, groups and permissions** in any Django project.
