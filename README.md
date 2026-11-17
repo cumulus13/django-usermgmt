@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/licface15/images/refs/heads/main/django-usermgmt/screenshot.png" width="40%" alt="logo">
+  <img src="https://raw.githubusercontent.com/licface15/images/refs/heads/main/django-usermgmt/screenshot.png" width="98%" alt="logo">
 </p>
 
 
