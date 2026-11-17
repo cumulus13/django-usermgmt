@@ -44,7 +44,7 @@ No third-party dependencies.
 
 ## Installation
 
-1. Copy the `usermgmt/` directory into your project, next to `manage.py`.
+1. `pip install django-usermgmt` or Copy the `usermgmt/` directory into your project, next to `manage.py`.
 2. Add it to `INSTALLED_APPS`:
 
    ```python
