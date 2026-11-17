@@ -1,0 +1,100 @@
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "django-usermgmt"
+version = "1.0.3"
+description = "A production-oriented command line toolkit for managing users, groups and permissions in any Django project."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+authors = [
+    { name = "Hadi Cahyadi", email = "cumulus13@gmail.com" },
+]
+maintainers = [
+    { name = "Hadi Cahyadi", email = "cumulus13@gmail.com" },
+]
+keywords = [
+    "django",
+    "user-management",
+    "usermgr",
+    "cli",
+    "management-command",
+    "permissions",
+    "groups",
+    "audit-log",
+    "bulk-import",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Environment :: Console",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: System :: Systems Administration :: Authentication/Directory",
+]
+dependencies = [
+    "django>=4.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-django>=4.8",
+    "ruff>=0.6.0",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/cumulus13/django-usermgmt"
+Documentation = "https://github.com/cumulus13/django-usermgmt/tree/main/docs"
+Repository = "https://github.com/cumulus13/django-usermgmt.git"
+"Bug Tracker" = "https://github.com/cumulus13/django-usermgmt/issues"
+Changelog = "https://github.com/cumulus13/django-usermgmt/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "usermgmt",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/usermgmt",
+    "/docs",
+    "/examples",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE*",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "W",
+]
