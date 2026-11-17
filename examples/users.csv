@@ -1,0 +1,3 @@
+username,email,password,first_name,last_name,is_staff,is_superuser,is_active,groups,permissions
+budi,budi@example.com,Xk9#mPq2-vLz!7,Budi,Santoso,false,false,true,editors;qa,auth.view_user
+sari,sari@example.com,,Sari,Wulandari,true,false,true,editors,blog.*

@@ -1,0 +1,5 @@
+{
+  "users": [
+    {"username": "andi", "email": "andi@example.com", "password": "Pq7!zRt4-wNm2", "groups": ["qa"], "is_staff": true}
+  ]
+}
