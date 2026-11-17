@@ -28,6 +28,10 @@ from usermgmt import services as svc
 FORMATS = ("table", "json", "csv")
 USER_COLUMNS = ["id", "username", "email", "active", "staff", "superuser", "last_login", "groups"]
 
+try:
+    from rchf import CustomRichHelpFormatter
+except:
+    CustomRichHelpFormatter = argparse.RawTextHelpFormatter
 
 class Command(BaseCommand):
     help = "Manage users, groups and permissions (create, list, check, grant, import/export, ...)."
@@ -35,11 +39,22 @@ class Command(BaseCommand):
     # ------------------------------------------------------------------ #
     # Argument definitions
     # ------------------------------------------------------------------ #
+
+    def create_parser(self, prog_name, subcommand, **kwargs):
+        kwargs.setdefault("formatter_class", CustomRichHelpFormatter)
+        return super().create_parser(prog_name, subcommand, **kwargs)
+
     def add_arguments(self, parser):
-        sub = parser.add_subparsers(dest="action", metavar="ACTION", required=True)
+        # sub = parser.add_subparsers(dest="action", metavar="ACTION", required=True)
+        parser.formatter_class = CustomRichHelpFormatter
+        sub = parser.add_subparsers(
+            dest="action",
+            metavar="ACTION",
+            required=True
+        )
 
         def add(name, help_text, fmt=False):
-            p = sub.add_parser(name, help=help_text, description=help_text)
+            p = sub.add_parser(name, help=help_text, description=help_text, formatter_class=CustomRichHelpFormatter)
             if fmt:
                 p.add_argument("--format", choices=FORMATS, default="table")
             return p

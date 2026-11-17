@@ -4,6 +4,11 @@
   <img src="https://raw.githubusercontent.com/licface15/images/refs/heads/main/django-usermgmt/logo.png" width="40%" alt="logo">
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/licface15/images/refs/heads/main/django-usermgmt/screenshot.png" width="40%" alt="logo">
+</p>
+
+
 A production-oriented command line toolkit for managing **users, groups and permissions** in any Django project.
 
 Stock `manage.py` only ships `createsuperuser` and `changepassword`. There is no built-in way to create a regular
@@ -166,6 +171,8 @@ python manage.py test usermgmt
   Custom authentication backends with their own permission logic are not consulted.
 - Passwords in import files are plain text; protect and delete those files (see the [security guide](docs/SECURITY.md)).
 
+
+**for cli's color, install `pip install rchf`**
 
 ## 👤 Author
         
