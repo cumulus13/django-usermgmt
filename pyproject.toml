@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "django-usermgmt"
-version = "1.0.5"
+version = "1.0.6"
 description = "A production-oriented command line toolkit for managing users, groups and permissions in any Django project."
 readme = "README.md"
 requires-python = ">=3.9"
